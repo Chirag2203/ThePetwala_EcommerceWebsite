@@ -25,3 +25,31 @@ body{
     font-size: 80px;
     font-weight: 700;
 }
+/* top choice search box*/
+.inputBox_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-width: 14em;
+    width: fit-content;
+    height: fit-content;
+    background-color: #212121;
+    border-radius: 0.8em;
+    overflow: hidden;
+  }
+  
+  
+  
+  .inputBox {
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+    width: 100%;
+    border: 0;
+    padding: 0.5em 1.5em 0.5em 0;
+    font-size: 1em;
+  }
+  
+  ::placeholder {
+    color: #abb2bf;
+  }
