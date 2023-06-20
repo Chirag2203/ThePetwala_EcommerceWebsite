@@ -1,18 +1,20 @@
-// Get the dropdown button and content elements
-var dropdownButton = document.querySelector('.dropbtn');
-var dropdownContent = document.querySelector('.dropdown-content');
+//register and sign in
+const registerbtn = document.getElementById('signup');
 
-// Add a click event listener to the button
-dropdownButton.addEventListener('click', function() {
-  // Toggle the visibility of the dropdown content
-  dropdownContent.classList.toggle('show');
+registerbtn.addEventListener('click', () => {
+  window.location.href = "Pages/Register.html";
 });
 
-// Close the dropdown menu if the user clicks outside of it
-window.addEventListener('click', function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    if (dropdownContent.classList.contains('show')) {
-      dropdownContent.classList.remove('show');
+const loginbtn = document.getElementById('login');
+loginbtn.addEventListener('click', () => {
+    window.location.href = "Pages/Login.html";
     }
-  }
-});
+);
+
+
+//check for errors
+const tohome = document.getElementById('tohome');
+tohome.addEventListener('click', () => {
+    window.location.href = "index.html";
+    }
+);
