@@ -12,7 +12,7 @@
 <body>
     <div class="container mt-5 pt-5">
         <div class="mt-5 flex flex-col items-center align-center justify-center">
-            <form class="form w-96 bg-blue-200 ">
+            <form id="regform"class="form w-96 bg-blue-200 " action="\" method="get">
                 <p class="title">Sign-Up </p>
                 <p class="message">Signup now to get the best offers! </p>
                     <div class="flex">
@@ -33,23 +33,27 @@
                 </label> 
                     
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
+                    <input required="" placeholder="" type="password" class="input" id="password">
                     <span>Password</span>
                 </label>
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
+                    <input required="" placeholder="" type="password" class="input" id="confpassword">
                     <span>Confirm password</span>
                 </label>
-                <button class="submit">Submit</button>
+                <span id="error"></span>
+                <button class="submitbtn" id="subbtn" type="submit">Sign-Up</button>
                 <p class="signin">Already have an acount ? <a href="/Pages/Login.html">Login</a> </p>
+                
             </form>
-            <button id="tohome" class="mt-5 p-2 ">
+            <a id="tohome" class="mt-5 p-2 " href="/index.html">
                 Get back to home
-              </button>
+              </a>
         </div>
         
     </div>
 
-    <script src="/index.js"></script>
+    <script src="/index.js">  
+        
+    </script>
 </body>
 </html>

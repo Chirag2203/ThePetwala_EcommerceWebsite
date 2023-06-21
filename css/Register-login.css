@@ -104,7 +104,7 @@
         color: green;
       }
       
-      .submit {
+      .submitbtn {
         border: none;
         outline: none;
         background-color: royalblue;
@@ -115,7 +115,7 @@
         transform: .3s ease;
       }
       
-      .submit:hover {
+      .submitbtn:hover {
         background-color: rgb(56, 90, 194);
       }
       

@@ -13,14 +13,14 @@
   <link rel="stylesheet" href="css/ser-card.css">
   <link rel="stylesheet" href="css/aboutus.css">
   <link rel="stylesheet" href="css/ownercard.css">
-
+  <script defer src="index.js"></script>
   <title>Petwala</title>
 </head>
 
 <body>
 
-  <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+  <header class="text-gray-600 body-font bg-transparent bg-opacity-0 navbarbg"> 
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center bg-transparent bg-opacity-0">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <img src="/Images/Logo-2.png" class="h-12">
         <span class="ml-3 text-2xl ">The Petwala</span>
@@ -71,17 +71,20 @@
     </div>
   </header>
 <!--Name section-->
-  <section class="bg-blue-100 h-96 ">
-    <div class="firstp flexdiv ">
-      <div class="tittle   ">
-        <h2>The Petwala</h2>
-      </div>
-      <div class="subtittle ">
-        <h3>One Stop Solution For All Your Pet Needs</h3>
-      </div>
+<!--Uses style.css-->
+  <section class="  wrapper ">
+    <div class=" fcont">
+      <h2 class="main-tittle">Thepetwala</h2>
+      <img src="/Images/R.jpeg"  class="sky">
+      <!-- <img src="/Images/Background copy.png" class=" animals "  alt="">
+      <img src="/Images/Background copy 3.png" class=" sky"  alt="">
+      <img src="/Images/Background copy 4.png" class=" building " > -->
+    </div>
 
   </section>
+
   <!--Services we offer-->
+  <!--This uses ser-card.css-->
   <section>
   <div class="container flex justify-start flex-col items-center align-items h-screen">
     <div class="serv-tittle">
@@ -149,6 +152,7 @@
   
   
   </section>
+
 <!--offer section-->
 <!--this uses offer-card.css-->
   <section class="bg-red-100 ">
@@ -158,7 +162,10 @@
       <div class="catg card  card3 mt-5 "> Cats</div>
     </div>
   </section>
+
 <!--Our top choices-->
+<!--This uses style.css for searchbox and themeswitch.css for 
+add to cart button and search button-->
 <section >
   <div class="container flex flex-col  justify-center px-24">
     <div class="choice-header flex items-center justify-center">
@@ -305,6 +312,7 @@
 
 
   <!--About us-->
+  <!--uses aboutus.css ownercard.css-->
   <section>
     <div class="container flex justify-evenly mt-5 pt-5 items-center">
       <div class="about-card " >
@@ -343,6 +351,7 @@
 
 
 <!-- footer -->
+<!--social-footer.css-->
 <footer class="text-black body-font">
   <div class="container px-16 pt-10 mt-10 mx-auto bg-gray-100">
     <div class="flex flex-wrap md:text-left text-center order-first">

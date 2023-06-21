@@ -11,7 +11,7 @@
 <body>
     <div class="container mt-5 pt-5">
         <div class="mt-5 flex flex-col items-center align-center justify-center">
-            <form class="form w-96 bg-blue-200 ">
+            <form id="regform"class="form w-96 bg-blue-200 ">
                 <p class="title fw-800">Welcome Back!  </p>
                 <p class="message">Enter your details to login  </p>
                      
@@ -21,16 +21,16 @@
                 </label> 
                     
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
+                    <input required="" placeholder="" type="password" class="input" id="">
                     <span>Password</span>
                 </label>
-                
-                <button class="submit">Submit</button>
+                <span id="erro"></span>
+                <button class="submitbtn" id="subbtn" >Submit</button>
                 <p class="signin">Don't have an account? <a href="/Pages/Register.html">Signup</a> </p>
             </form>
-            <button id="tohome" class="mt-5 p-2 ">
-              Get back to home
-            </button>
+            <a id="tohome" class="mt-5 p-2 " href="/index.html">
+                Get back to home
+              </a>
             
         </div>
         

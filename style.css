@@ -7,7 +7,10 @@
     left: 0;
     
 }
-body{
+.navbarbg{
+    background: transparent;
+}
+*{
     margin:0;
     padding:0;
 }
@@ -19,12 +22,9 @@ body{
 .firstp{
     text-align: center;
     flex-direction: column;
-    height: 300px;  
+    height: 650px;  
 }
-.tittle{
-    font-size: 80px;
-    font-weight: 700;
-}
+
 /* top choice search box*/
 .inputBox_container {
     display: flex;
@@ -37,7 +37,10 @@ body{
     border-radius: 0.8em;
     overflow: hidden;
   }
-  
+
+.body{
+    /* overflow: hidden; */
+}
   
   
   .inputBox {
@@ -53,3 +56,48 @@ body{
   ::placeholder {
     color: #abb2bf;
   }
+
+  .main-tittle{
+    font-size: 80px;
+    font-weight: 700;
+    z-index: -1;
+    color: white;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
+}
+.wrapper{
+ /* position: relative; */
+ overflow-y: visible;
+ overflow-x: hidden;
+ perspective: 10px;
+ height: 90vh;
+ /* scroll-snap-type: proximity; */
+}
+.fcont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.sky{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateZ(-10px) scale(2);
+}
+.building{
+    position: absolute;
+    /* height: 100%; */
+    width: 100%;
+    object-fit: cover;
+    transform: translateZ(-5px) scale(1.5);
+}
+.animals{
+    position: absolute;
+    /* height: 100%; */
+    width: 100%;
+    transform: translateZ(-2.5px) scale(1.25);
+    object-fit: cover;   
+}
