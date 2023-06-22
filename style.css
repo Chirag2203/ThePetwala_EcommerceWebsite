@@ -26,34 +26,53 @@
 }
 
 /* top choice search box*/
-.inputBox_container {
+/* .inputBox_container {
     display: flex;
     align-items: center;
     flex-direction: row;
     max-width: 14em;
     width: fit-content;
     height: fit-content;
-    background-color: #212121;
+    
     border-radius: 0.8em;
     overflow: hidden;
+  } */
+  
+  .inputBox:focus {
+    border-color:transparent;
+    animation: glow-border 2s ease-in-out infinite;
+    /* background: red; */
   }
 
-.body{
-    /* overflow: hidden; */
-}
+  @keyframes glow-border {
+    0% {
+      box-shadow: 0 0 5px 2px salmon; /* Start with a small green glow */
+    }
+    50% {
+      box-shadow: 0 0 10px 4px orange; /* Increase the glow size and intensity */
+    }
+    100% {
+      box-shadow: 0 0 5px 2px salmon; /* Return to the smaller glow */
+    }
+  }
+
   
   
   .inputBox {
-    background-color: transparent;
-    color: #ffffff;
-    outline: none;
+    background-color: #333;
+    /* background-color: transparent; */
+    /* color: #ffffff; */
+    border-radius: 10px;
+    padding: 5px;
+    /* outline: none; */
     width: 100%;
-    border: 0;
+    color:white;
+    /* border: 0; */
     padding: 0.5em 1.5em 0.5em 0;
     font-size: 1em;
   }
   
-  ::placeholder {
+ .inputBox ::placeholder {
     color: #abb2bf;
   }
 
@@ -64,6 +83,9 @@
     color: white;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.55);
 }
+
+
+
 .wrapper{
  /* position: relative; */
  overflow-y: visible;

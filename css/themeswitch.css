@@ -1,9 +1,24 @@
+/*
+Contains the styles for the theme switcher.
+Sign in
+log in
+notification
+nav button
+add to cart
+explore more
+footer-join button
+top-choices-search btn
+*/
+
+
+
+/*Theme button*/
 .switch {
     font-size: 17px;
     position: relative;
     display: inline-block;
-    width: 64px;
-    height: 34px;
+    width: 60px;
+    height: 30px;
     margin: 4px;
   }
   
@@ -28,8 +43,8 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
     border-radius: 20px;
     left: 2px;
     bottom: 2px;
@@ -40,8 +55,8 @@
   
   .sun svg {
     position: absolute;
-    top: 6px;
-    left: 36px;
+    top: 3.5px;
+    left: 32px;
     z-index: 1;
     width: 24px;
     height: 24px;
@@ -50,8 +65,8 @@
   .moon svg {
     fill: #73C0FC;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 3px;
+    left: 3px;
     z-index: 1;
     width: 24px;
     height: 24px;
@@ -106,6 +121,47 @@
   .input:checked + .slider:before {
     transform: translateX(30px);
   }
+
+/*Nav button*/
+.navbtn {
+  font-size: 15px;
+  color: #444;
+  /* font-family: inherit; */
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  /* text-transform: uppercase; */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.navbtn:focus,
+.navbtn:hover {
+  color: #000;
+}
+
+.navbtn:focus:after,
+.navbtn:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.navbtn:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #222;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 
 /* Path: sign up */
 .sign-up {
@@ -233,6 +289,128 @@
     transform: scale(0.95);
    }
 
+
+
+
+
+/* Blog Like button */
+.bl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  
+}
+
+.bl-btn::after {
+  content: 'Like';
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  font-size: 15px;
+  color: rgb(248, 57, 57);
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s linear;
+  top: 115%;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  transition: .2s linear;
+}
+
+.icon path {
+  fill: rgb(248, 57, 20);
+  transition: .2s linear;
+}
+
+.bl-btn:hover > .icon {
+  transform: scale(1.1);
+}
+
+.bl-btn:hover > .icon path {
+  fill: rgb(249, 69, 69);
+}
+
+.bl-btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: 105%;
+}
+
+
+
+
+/*Explore all */
+.expbtn {
+  background: #A370F0;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-right: 1.3em;
+  padding-left: 3.5em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  /* padding-right: 3.3em; */
+}
+
+.expbtn .expicon {
+  background: white;
+  margin-left: -0.1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  
+  border-radius: 10px;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  left: 0.5em;
+  transition: all 0.3s;
+}
+
+.expbtn:hover .expicon {
+  width: calc(100% - 0.8em);
+  margin-right: 10em;
+}
+
+.expbtn .expicon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+  /* margin-right: em; */
+}
+
+.expbtn:hover .expicon svg {
+  transform: translateX(-0.1em);
+}
+
+.expbtn:active .expicon {
+  transform: scale(0.95);
+}
+
+
+
+
+
    
     /* subscribe button */
     .subs-btn {
@@ -297,7 +475,7 @@
       align-items: center;
       justify-content: center;
       color: #e8e8e8;
-      background-color: #212121;
+      background-color: #333;
       width: 45px;
       height: 45px;
       font-size: 24px;
@@ -433,3 +611,70 @@
         opacity: 1;
       }
     }
+
+    /*Notification button*/
+    .buttonntf {
+      width: 35px;
+      height: 35px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(44, 44, 44);
+      border-radius: 50%;
+      cursor: pointer;
+      transition-duration: .3s;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+      border: none;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+    
+    .bell {
+      width: 13px;
+    }
+    
+    .bell path {
+      fill: white;
+    }
+    
+    .buttonntf:hover {
+      background-color: rgb(56, 56, 56);
+    }
+    
+    .buttonntf:hover .bell {
+      animation: bellRing 0.9s both;
+    }
+    
+    /* bell ringing animation keyframes*/
+    @keyframes bellRing {
+      0%,
+      100% {
+        transform-origin: top;
+      }
+    
+      15% {
+        transform: rotateZ(10deg);
+      }
+    
+      30% {
+        transform: rotateZ(-10deg);
+      }
+    
+      45% {
+        transform: rotateZ(5deg);
+      }
+    
+      60% {
+        transform: rotateZ(-5deg);
+      }
+    
+      75% {
+        transform: rotateZ(2deg);
+      }
+    }
+    
+    .buttonntf:active {
+      transform: scale(0.8);
+    }
+    
