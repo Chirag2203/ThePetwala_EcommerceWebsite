@@ -9,7 +9,13 @@ explore more
 footer-join button
 top-choices-search btn
 */
-
+*{
+  --p-color:#FF6816;
+  --s-color:#FFB48F;
+  --t-color:#FFB48F;
+  --black-color:#222;
+  --white-color:#f9f9f9;
+}
 
 
 /*Theme button*/
@@ -138,13 +144,14 @@ top-choices-search btn
   transition-property: color;
 }
 
+
 .navbtn:focus,
 .navbtn:hover {
   color: #000;
 }
 
 .navbtn:focus:after,
-.navbtn:hover:after {
+.navbtn:hover:after{
   width: 100%;
   left: 0%;
 }
@@ -162,6 +169,43 @@ top-choices-search btn
   transition-duration: 400ms;
   transition-property: width, left;
 }
+
+
+
+/*Underline line animation*/
+.line-anim{
+  position: relative;
+  border:none;
+  background: none;
+  /* text-transform: uppercase; */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.line-anim:hover{
+  color: #000;
+}
+
+.line-anim:hover::after{
+  width: 50%;
+  left: 0%;
+}
+.line-anim::after{
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 0%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+
 
 /* Path: sign up */
 .sign-up {
@@ -264,11 +308,11 @@ top-choices-search btn
    }
    
    .log-in1 div:nth-child(1) {
-    background-color: #1e90ff;
+    background-color: #FF6816;
    }
    
    .log-in1 div:nth-child(2) {
-    background-color: #21dc62;
+    background-color: #333;
    }
    
    /* .log-in1:hover {
@@ -677,4 +721,55 @@ top-choices-search btn
     .buttonntf:active {
       transform: scale(0.8);
     }
+    
+
+
+
+
+
+    /*Blog explore more button*/
+    .blog-btn {
+      width: 130px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      background-color: salmon;
+      border-radius: 30px;
+      color: rgb(19, 19, 19);
+      font-weight: 600;
+      font-size: 15px;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      transition-duration: .2s;
+      padding-left: 8px;
+      transition-duration: .5s;
+    }
+    
+    .svgIcon {
+      height: 20px;
+      transition-duration: 1.5s;
+    }
+    
+    .bell path {
+      fill: rgb(19, 19, 19);
+    }
+    
+    .blog-btn:hover {
+      background-color: orange;
+      transition-duration: .5s;
+    }
+    
+    .blog-btn:active {
+      transform: scale(0.97);
+      transition-duration: .2s;
+    }
+    
+    .blog-btn:hover .svgIcon {
+      transform: rotate(360deg) scale(1.2);
+      transition-duration: 1.5s;
+    }
+    
     
